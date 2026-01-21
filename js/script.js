@@ -7,7 +7,7 @@ function cambiarTitulo() {
 // Ejercicio 2
 const parrafos = document.querySelectorAll(".texto");
 
-parrafos.forEach(parrafo => {
+parrafos.forEach(function (parrafo) {
     parrafo.style.color = "blue";
 });
 
@@ -15,7 +15,7 @@ parrafos.forEach(parrafo => {
 function eje3() {
     const items = document.querySelectorAll(".item");
 
-    items.forEach(item => {
+    items.forEach(function (item) {
         item.textContent = "Elemento modificado";
         item.style.color = "blue";
     });
@@ -30,7 +30,7 @@ function eje4() {
 // Ejercicio 5
 const cajas = document.querySelectorAll(".caja");
 
-cajas.forEach(caja => {
+cajas.forEach(function (caja) {
     caja.style.color = "white";
     caja.style.backgroundColor = "gray";
 });
@@ -48,10 +48,13 @@ function eje7() {
 }
 
 // Ejercicio 8
+const boton = document.getElementById("btnCambiar");
+boton.addEventListener("click", botonCambiar);
+
 function botonCambiar() {
     const notas = document.querySelectorAll(".nota");
 
-    notas.forEach(nota => {
+    notas.forEach(function (nota) {
         nota.textContent = "Aprobado";
         nota.style.color = "green";
     });
